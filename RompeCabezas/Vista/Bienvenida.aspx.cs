@@ -13,5 +13,10 @@ namespace RompeCabezas.Vista
         {
 
         }
+
+        protected void btnComenzar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Rompecabezas.aspx");
+        }
     }
 }

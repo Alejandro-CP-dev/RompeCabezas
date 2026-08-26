@@ -9,19 +9,17 @@ using System.Web;
 namespace RompeCabezas.Datos
 {
     public class ProgresoDAO
-    {
-        private readonly ConexionDB conexionDB;
-
+    {        
         public void GuardarProgreso(Progreso progreso)
         {
-            using (SqlConnection conn = conexionDB.MtAbrirConexion())
+            using (SqlConnection conn = ConexionDB.MtAbrirConexion())
             {
                 conn.Open();
 
                 string consulta = @"insert into Progreso
-                              (FechaCompletado, TiempoSegundos, Mensaje) 
-                               VALUES
-                              (@fecha, @tiempo, @mensaje)";
+                                  (FechaCompletado, TiempoSegundos, Mensaje) 
+                                   VALUES
+                                  (@fecha, @tiempo, @mensaje)";
 
 
                 SqlCommand cmd = new SqlCommand(consulta, conn);
@@ -37,7 +35,7 @@ namespace RompeCabezas.Datos
         {
             Progreso progreso = null;
 
-            using (SqlConnection conn = conexionDB.MtAbrirConexion())
+            using (SqlConnection conn = ConexionDB.MtAbrirConexion())
             {
                 conn.Open();
 

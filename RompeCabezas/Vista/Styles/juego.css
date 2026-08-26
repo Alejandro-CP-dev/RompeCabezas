@@ -1,2 +1,22 @@
-﻿body {
+﻿.casilla {
+    position: absolute;
+    border: 1px dashed #ccc;
+}
+
+.pieza {
+    display: inline-block;
+    cursor: grab;
+    border: 1px solid #fff;
+}
+
+    .pieza.colocada {
+        border: none;
+        cursor: default;
+    }
+
+.contenedor-piezas {
+    display: flex;
+    flex-wrap: wrap;
+    width: 320px;
+    margin-top: 20px;
 }

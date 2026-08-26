@@ -67,10 +67,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\vicki.jpg" />
+    <Content Include="Images\vicky.jpeg" />
+    <Content Include="Scripts\circular-gallery.js" />
     <Content Include="Vista\Bienvenida.aspx" />
     <Content Include="Vista\Rompecabezas.aspx" />
-    <Content Include="Vista\Scripts\rompecabezas.js" />
+    <Content Include="Scripts\rompecabezas.js" />
     <Content Include="Vista\Sorpresa.aspx" />
+    <Content Include="Vista\Styles\circular-gallery.css" />
     <Content Include="Vista\Styles\juego.css" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -79,6 +83,7 @@
     <Compile Include="Datos\ConexionDB.cs" />
     <Compile Include="Datos\ProgresoDAO.cs" />
     <Compile Include="Logica\CartaL.cs" />
+    <Compile Include="Logica\ProgresoL.cs" />
     <Compile Include="Modelo\Carta.cs" />
     <Compile Include="Modelo\Progreso.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -113,9 +118,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Vista\Images\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

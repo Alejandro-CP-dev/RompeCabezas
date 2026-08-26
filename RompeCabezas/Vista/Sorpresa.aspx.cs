@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RompeCabezas.Logica;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,9 +10,15 @@ namespace RompeCabezas.Vista
 {
     public partial class Sorpresa : System.Web.UI.Page
     {
+        private ProgresoL progresoBL = new ProgresoL();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            var progreso = progresoBL.ConsultarUltimoProgreso();
+            if (progreso != null)
+            {
+                lblMensaje.Text = progreso.Mensaje;
+            }
         }
     }
 }
